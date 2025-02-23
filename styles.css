@@ -76,7 +76,7 @@ width: 100%;
     display: none;
     font-size: 24px;
     cursor: pointer;
-    margin-right: 80px;
+    margin-right: 65px;
   }
   .mobile-menu {
     display: none;
@@ -213,6 +213,7 @@ width: 100%;
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+      width:100%;
   }
   footer h1 {
     margin: 7px auto;
