@@ -76,7 +76,7 @@ width: 100%;
     display: none;
     font-size: 24px;
     cursor: pointer;
-    margin-right: 65px;
+    margin-right: 20px;
   }
   .mobile-menu {
     display: none;
@@ -256,10 +256,14 @@ width: 100%;
     }
     .mobile-menu-icon {
       display: block;
+        margin-right:80px;
     }
     .projects-list {
       flex-direction: column;
     }
+      footer{
+          width:100%;
+      }
   }
   @media (min-width: 769px) {
     .mobile-menu-icon, .mobile-menu {
