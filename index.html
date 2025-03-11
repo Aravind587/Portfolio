@@ -22,15 +22,14 @@
       <a onclick="scrollToSection('about'); toggleMenu()">About</a>
       <a onclick="scrollToSection('projects'); toggleMenu()">Projects</a>
       <a onclick="scrollToSection('contact'); toggleMenu()">Contact</a>
-     
     </div>
   </header>
   
   <section id="about" class="container">
     <img src="profile.jpg" alt="Korumilli Aravind Kumar" class="profile-pic">
     <div class="about-text">
-      <h2>I am <br style="animation: name_glow 1.5s ease-in-out"> Korumilli Aravind Kumar</h2>
-      <p> a passionate web developer and designer with a deep love for creating visually stunning and highly functional websites. I enjoy working on both front-end and back-end development, constantly exploring new technologies and design trends to enhance user experiences. My goal is to build responsive, modern, and intuitive web applications that not only look great but also perform seamlessly. I am always eager to learn, improve my skills, and stay updated with industry advancements. With a strong eye for detail and a problem-solving mindset, I strive to bring creativity and innovation to every project I work on.</p>
+      <h2>I am <br><span id="typing-text"></span></h2> <!-- "I am" static, typing in span -->
+      <p>a passionate web developer and designer with a deep love for creating visually stunning and highly functional websites. I enjoy working on both front-end and back-end development, constantly exploring new technologies and design trends to enhance user experiences. My goal is to build responsive, modern, and intuitive web applications that not only look great but also perform seamlessly. I am always eager to learn, improve my skills, and stay updated with industry advancements. With a strong eye for detail and a problem-solving mindset, I strive to bring creativity and innovation to every project I work on.</p>
       <button class="resume-btn" onclick="window.location.href='resume.pdf'">Download Resume</button>
     </div>
   </section>
@@ -67,8 +66,6 @@
     </div>
   </footer>
   
-  <script src="script.js">
-    
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
