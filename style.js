@@ -1,10 +1,10 @@
-// ── HEADER SCROLL ──────────────────────────────
+/* ── HEADER SCROLL ── */
 const header = document.getElementById('mainHeader');
 window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// ── PROJECT TAB SWITCHING ──────────────────────
+/* ── PROJECT TAB SWITCHING ── */
 document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -15,12 +15,12 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     });
 });
 
-// ── POPUP OPEN / CLOSE ─────────────────────────
+/* ── POPUP OPEN / CLOSE ── */
 function openPopup(id) {
     const popup = document.getElementById(id);
     if (!popup) return;
     popup.classList.add('is-open');
-    document.body.classList.add('popup-open');   // lock background scroll
+    document.body.classList.add('popup-open');
 }
 
 function closePopup(id) {
@@ -30,19 +30,28 @@ function closePopup(id) {
     document.body.classList.remove('popup-open');
 }
 
-// Close on Escape key
+/* Backdrop click closes any popup */
+document.querySelectorAll('.popup-backdrop').forEach(bd => {
+    bd.addEventListener('click', () => {
+        const popup = bd.closest('.popup');
+        if (popup) {
+            popup.classList.remove('is-open');
+            document.body.classList.remove('popup-open');
+        }
+    });
+});
+
+/* Escape key closes all popups */
 document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
-        document.querySelectorAll('.popup.is-open').forEach(p => {
-            p.classList.remove('is-open');
-        });
+        document.querySelectorAll('.popup.is-open').forEach(p => p.classList.remove('is-open'));
         document.body.classList.remove('popup-open');
     }
 });
 
-// ── SCROLL REVEAL ──────────────────────────────
+/* ── SCROLL REVEAL ── */
 const revealEls = document.querySelectorAll(
-    '.rm-item, .skill-category, .cert-card, .proj-card, .flutter-highlight'
+    '.rm-item, .skill-category, .cert-card, .proj-card, .flutter-highlight, .ai-highlight'
 );
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -61,7 +70,7 @@ revealEls.forEach(el => {
     observer.observe(el);
 });
 
-// ── HAMBURGER MENU ────────────────────────────
+/* ── HAMBURGER MENU ── */
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.querySelector('.info_links');
 let menuOpen = false;
@@ -71,7 +80,7 @@ hamburger.addEventListener('click', () => {
     if (menuOpen) {
         navLinks.style.cssText = `
             display:flex; flex-direction:column; position:absolute;
-            top:64px; right:5%; background:rgba(10,14,26,.97);
+            top:64px; right:5%; background:rgba(11,13,24,.97);
             border:1px solid rgba(255,255,255,.09); border-radius:12px;
             padding:12px; z-index:999; gap:4px;
         `;
@@ -89,23 +98,12 @@ document.querySelectorAll('.info_links a').forEach(a => {
     });
 });
 
-// ── ACTIVE NAV HIGHLIGHT ──────────────────────
+/* ── ACTIVE NAV HIGHLIGHT ── */
 const sections = document.querySelectorAll('section[id], footer[id]');
-const navA = document.querySelectorAll('.info_links a');
+const navA     = document.querySelectorAll('.info_links a');
 
-new IntersectionObserver(entries => {
-    entries.forEach(e => {
-        if (e.isIntersecting) {
-            navA.forEach(a => {
-                a.style.color = '';
-                if (a.getAttribute('href') === '#' + e.target.id) {
-                    a.style.color = 'var(--accent)';
-                }
-            });
-        }
-    });
-}, { threshold: 0.45 }).observe
-    ? sections.forEach(s => new IntersectionObserver(entries => {
+sections.forEach(s => {
+    new IntersectionObserver(entries => {
         entries.forEach(e => {
             if (e.isIntersecting) {
                 navA.forEach(a => {
@@ -114,5 +112,5 @@ new IntersectionObserver(entries => {
                 });
             }
         });
-    }, { threshold: 0.45 }).observe(s))
-    : null;
+    }, { threshold: 0.45 }).observe(s);
+});
