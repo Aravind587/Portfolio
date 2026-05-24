@@ -34,18 +34,20 @@
                 <div class="orbit-ring"></div>
                 <!-- 6 orbit icons: Flutter · Python · GitHub · VS Code · MySQL · AI -->
                 <div class="orbit-icon oi-1" title="Flutter">
-                    <svg viewBox="0 0 48 48" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#40C4FF" d="M24.01 4l-16 16 8 8 24-24z"/>
-                        <path fill="#40C4FF" d="M8 32l8-8 8 8-8 8z"/>
-                        <path fill="#29B6F6" d="M16 24l8 8-8 8-8-8z"/>
-                        <path fill="#01579B" d="M16 32l4 4-4 4-4-4z"/>
-                    </svg>
+                    <span class="orbit-inner">
+                        <svg viewBox="0 0 48 48" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#40C4FF" d="M24.01 4l-16 16 8 8 24-24z"/>
+                            <path fill="#40C4FF" d="M8 32l8-8 8 8-8 8z"/>
+                            <path fill="#29B6F6" d="M16 24l8 8-8 8-8-8z"/>
+                            <path fill="#01579B" d="M16 32l4 4-4 4-4-4z"/>
+                        </svg>
+                    </span>
                 </div>
-                <div class="orbit-icon oi-2" title="Python"><img src="Images/pyhton.jpeg" alt="Python"></div>
-                <div class="orbit-icon oi-3" title="GitHub"><i class="fa-brands fa-github" style="color:#e2e8f0;font-size:1.35rem;"></i></div>
-                <div class="orbit-icon oi-4" title="VS Code"><i class="fa-solid fa-code" style="color:#007acc;font-size:1.15rem;"></i></div>
-                <div class="orbit-icon oi-5" title="MySQL"><img src="Images/mysql.jpg" alt="MySQL"></div>
-                <div class="orbit-icon oi-6" title="Artificial Intelligence"><i class="fa-solid fa-brain" style="color:#a78bfa;font-size:1.15rem;"></i></div>
+                <div class="orbit-icon oi-2" title="Python"><span class="orbit-inner"><img src="Images/pyhton.jpeg" alt="Python"></span></div>
+                <div class="orbit-icon oi-3" title="GitHub"><span class="orbit-inner"><i class="fa-brands fa-github" style="color:#e2e8f0;font-size:1.35rem;"></i></span></div>
+                <div class="orbit-icon oi-4" title="VS Code"><span class="orbit-inner"><i class="fa-solid fa-code" style="color:#007acc;font-size:1.15rem;"></i></span></div>
+                <div class="orbit-icon oi-5" title="MySQL"><span class="orbit-inner"><img src="Images/mysql.jpg" alt="MySQL"></span></div>
+                <div class="orbit-icon oi-6" title="Artificial Intelligence"><span class="orbit-inner"><i class="fa-solid fa-brain" style="color:#a78bfa;font-size:1.15rem;"></i></span></div>
                 <img src="Images/profile.png" alt="Korumilli Aravind Kumar" class="hero-img">
             </div>
             <div class="hero-socials">
@@ -170,9 +172,9 @@
      ▸ Replace "btech-memo.jpg" with your actual file
 ══════════════════════════════════════════════════ -->
 <div id="memo-btech" class="popup memo-popup">
-    <div class="popup-backdrop"></div>
+    <div class="popup-backdrop" role="button" aria-label="Close popup"></div>
     <div class="popup-content">
-        <button class="popup-close" onclick="closePopup('memo-btech')"><i class="fa-solid fa-xmark"></i></button>
+        <button class="popup-close" onclick="closePopup('memo-btech')" aria-label="Close memo" role="button"><i class="fa-solid fa-xmark"></i></button>
         <div class="memo-header">
             <div class="memo-header-icon"><i class="fa-solid fa-graduation-cap"></i></div>
             <div class="memo-header-text">
@@ -197,9 +199,9 @@
      ▸ Replace "inter-memo.jpg" with your actual file
 ══════════════════════════════════════════════════ -->
 <div id="memo-inter" class="popup memo-popup">
-    <div class="popup-backdrop"></div>
+    <div class="popup-backdrop" role="button" aria-label="Close popup"></div>
     <div class="popup-content">
-        <button class="popup-close" onclick="closePopup('memo-inter')"><i class="fa-solid fa-xmark"></i></button>
+        <button class="popup-close" onclick="closePopup('memo-inter')" aria-label="Close memo" role="button"><i class="fa-solid fa-xmark"></i></button>
         <div class="memo-header">
             <div class="memo-header-icon"><i class="fa-solid fa-school"></i></div>
             <div class="memo-header-text">
@@ -224,9 +226,9 @@
      ▸ Replace "ssc-memo.jpg" with your actual file
 ══════════════════════════════════════════════════ -->
 <div id="memo-ssc" class="popup memo-popup">
-    <div class="popup-backdrop"></div>
+    <div class="popup-backdrop" role="button" aria-label="Close popup"></div>
     <div class="popup-content">
-        <button class="popup-close" onclick="closePopup('memo-ssc')"><i class="fa-solid fa-xmark"></i></button>
+        <button class="popup-close" onclick="closePopup('memo-ssc')" aria-label="Close memo" role="button"><i class="fa-solid fa-xmark"></i></button>
         <div class="memo-header">
             <div class="memo-header-icon"><i class="fa-solid fa-book-open"></i></div>
             <div class="memo-header-text">
@@ -470,9 +472,9 @@
 
         <!-- PROJECT DETAIL POPUPS -->
         <div id="popup1" class="popup">
-            <div class="popup-backdrop"></div>
+            <div class="popup-backdrop" role="button" aria-label="Close popup"></div>
             <div class="popup-content">
-                <button class="popup-close" onclick="closePopup('popup1')"><i class="fa-solid fa-xmark"></i></button>
+                <button class="popup-close" onclick="closePopup('popup1')" aria-label="Close project" role="button"><i class="fa-solid fa-xmark"></i></button>
                 <img src="Images/calculator-info.jpg" alt="Calculator">
                 <div class="popup-body">
                     <h3>Calculator</h3>
@@ -481,16 +483,15 @@
                     <div class="popup-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                     <div class="popup-actions">
                         <a href="https://aravind587.github.io/Calculator/" class="btn-primary" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live</a>
-                        <button onclick="closePopup('popup1')" class="btn-ghost">Close</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="popup2" class="popup">
-            <div class="popup-backdrop"></div>
+            <div class="popup-backdrop" role="button" aria-label="Close popup"></div>
             <div class="popup-content">
-                <button class="popup-close" onclick="closePopup('popup2')"><i class="fa-solid fa-xmark"></i></button>
+                <button class="popup-close" onclick="closePopup('popup2')" aria-label="Close project" role="button"><i class="fa-solid fa-xmark"></i></button>
                 <img src="Images/TIC-TAC-TOE-info.jpg" alt="Tic-Tac-Toe">
                 <div class="popup-body">
                     <h3>Tic-Tac-Toe</h3>
@@ -499,16 +500,16 @@
                     <div class="popup-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                     <div class="popup-actions">
                         <a href="https://aravind587.github.io/TIC-TAC-TOE-Game/" class="btn-primary" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live</a>
-                        <button onclick="closePopup('popup2')" class="btn-ghost">Close</button>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="popup3" class="popup">
-            <div class="popup-backdrop"></div>
+            <div class="popup-backdrop" role="button" aria-label="Close popup"></div>
             <div class="popup-content">
-                <button class="popup-close" onclick="closePopup('popup3')"><i class="fa-solid fa-xmark"></i></button>
+                <button class="popup-close" onclick="closePopup('popup3')" aria-label="Close project" role="button"><i class="fa-solid fa-xmark"></i></button>
                 <img src="Images/clock-info.jpg" alt="Clock">
                 <div class="popup-body">
                     <h3>Analog + Digital Clock</h3>
@@ -517,16 +518,16 @@
                     <div class="popup-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                     <div class="popup-actions">
                         <a href="https://aravind587.github.io/Clock/" class="btn-primary" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live</a>
-                        <button onclick="closePopup('popup3')" class="btn-ghost">Close</button>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="popup4" class="popup">
-            <div class="popup-backdrop"></div>
+            <div class="popup-backdrop" role="button" aria-label="Close popup"></div>
             <div class="popup-content">
-                <button class="popup-close" onclick="closePopup('popup4')"><i class="fa-solid fa-xmark"></i></button>
+                <button class="popup-close" onclick="closePopup('popup4')" aria-label="Close project" role="button"><i class="fa-solid fa-xmark"></i></button>
                 <img src="Images/weather-forecasting-prediction-info.jpg" alt="Weather">
                 <div class="popup-body">
                     <h3>Weather Forecasting</h3>
@@ -535,16 +536,15 @@
                     <div class="popup-tags"><span>Python</span><span>ARIMA</span><span>SVM</span><span>TensorFlow</span><span>Pandas</span></div>
                     <div class="popup-actions">
                         <a href="https://github.com/Aravind587/Weather-Forecasting-Prediction" class="btn-primary" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                        <button onclick="closePopup('popup4')" class="btn-ghost">Close</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="popup5" class="popup">
-            <div class="popup-backdrop"></div>
+            <div class="popup-backdrop" role="button" aria-label="Close popup"></div>
             <div class="popup-content">
-                <button class="popup-close" onclick="closePopup('popup5')"><i class="fa-solid fa-xmark"></i></button>
+                <button class="popup-close" onclick="closePopup('popup5')" aria-label="Close project" role="button"><i class="fa-solid fa-xmark"></i></button>
                 <img src="Images/Atm-service-info1.jpg" alt="ATM">
                 <div class="popup-body">
                     <h3>ATM Simulator</h3>
@@ -553,16 +553,16 @@
                     <div class="popup-tags"><span>Python</span><span>Tkinter</span><span>SMTP</span><span>JSON</span></div>
                     <div class="popup-actions">
                         <a href="https://aravind587.github.io/Atm/" class="btn-primary" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live</a>
-                        <button onclick="closePopup('popup5')" class="btn-ghost">Close</button>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="popup6" class="popup">
-            <div class="popup-backdrop"></div>
+            <div class="popup-backdrop" role="button" aria-label="Close popup"></div>
             <div class="popup-content">
-                <button class="popup-close" onclick="closePopup('popup6')"><i class="fa-solid fa-xmark"></i></button>
+                <button class="popup-close" onclick="closePopup('popup6')" aria-label="Close project" role="button"><i class="fa-solid fa-xmark"></i></button>
                 <img src="Images/supermarket-info.jpg" alt="Supermarket">
                 <div class="popup-body">
                     <h3>Supermarket Application</h3>
@@ -571,7 +571,6 @@
                     <div class="popup-tags"><span>Python</span><span>Tkinter</span><span>SMTP</span></div>
                     <div class="popup-actions">
                         <a href="https://github.com/Aravind587/Supermarket" class="btn-primary" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                        <button onclick="closePopup('popup6')" class="btn-ghost">Close</button>
                     </div>
                 </div>
             </div>
